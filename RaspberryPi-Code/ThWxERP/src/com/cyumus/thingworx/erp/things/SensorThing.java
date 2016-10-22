@@ -17,7 +17,7 @@ import com.thingworx.types.constants.CommonPropertyNames;
 
 @SuppressWarnings("serial")
 @ThingworxPropertyDefinitions(properties = {	
-		@ThingworxPropertyDefinition(name="isEmpty", description="Current Temperature", baseType="NUMBER", category="Status", aspects={"isReadOnly:true"}),
+		@ThingworxPropertyDefinition(name="isEmpty", description="Is Empty?", baseType="BOOLEAN", category="Status", aspects={"isReadOnly:false"}),
 	})
 
 // Event Definitions
@@ -27,7 +27,7 @@ import com.thingworx.types.constants.CommonPropertyNames;
 
 // Steam Thing virtual thing class that simulates a Steam Sensor
 public class SensorThing extends VirtualThing implements Runnable {
-	
+	private boolean isEmpty;
 	private Thread _shutdownThread = null;
 	
 	
@@ -68,7 +68,7 @@ public class SensorThing extends VirtualThing implements Runnable {
 		try 
 		{			
 			entry.clear();
-			entry.SetStringValue("isEmpty", true);
+			entry.SetBooleanValue("isEmpty", false);
 			table.addRow(entry.clone());
 		} 
 		catch (Exception e) 
@@ -79,6 +79,10 @@ public class SensorThing extends VirtualThing implements Runnable {
 		return table;
 	}
 	
+	public void setEmpty(boolean iE){
+		this.isEmpty = iE;
+	}
+	
 	@Override
 	public void processScanRequest() throws Exception {
 		super.processScanRequest();
@@ -86,7 +90,9 @@ public class SensorThing extends VirtualThing implements Runnable {
 	}
 	
 	public void scanDevice() throws Exception {
-		super.setProperty("isEmpty", Math.random() >= 0.5);
+		super.setProperty("isEmpty", this.isEmpty);
+		super.updateSubscribedProperties(15000);
+		super.updateSubscribedEvents(60000);
 	}
 
 	@ThingworxServiceDefinition( name="Shutdown", description="Shutdown the client")
