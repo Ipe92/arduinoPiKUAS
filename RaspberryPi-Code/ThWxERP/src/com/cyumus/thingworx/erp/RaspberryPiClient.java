@@ -1,6 +1,10 @@
 package com.cyumus.thingworx.erp;
 
-import com.cyumus.thingworx.erp.things.SensorThing;
+import java.util.Random;
+
+import com.cyumus.thingworx.erp.things.BinThing;
+import com.cyumus.thingworx.erp.things.ItemThing;
+import com.cyumus.thingworx.erp.things.LocationThing;
 import com.thingworx.communications.client.ClientConfigurator;
 import com.thingworx.communications.client.ConnectedThingClient;
 import com.thingworx.communications.common.SecurityClaims;
@@ -38,10 +42,17 @@ public class RaspberryPiClient extends ConnectedThingClient {
 		RaspberryPiClient client = new RaspberryPiClient(config);
 		
 		// We create a sensor, with its name, description, the id and the client that will use it.
-		SensorThing sensor = new SensorThing("Sensor", "A sensor", "SensorThing", client);
+		ItemThing item = new ItemThing("Item A", "An item", "ItemThing", client);
+		BinThing bin = new BinThing("Bin A", "A bin", "BinThing", client);
+		bin.addItem(item);
+		LocationThing location = new LocationThing("Location A", "A location", "LocationThing", client);
+		location.addBin(bin);
+		
 		// We bind the client to the sensor.
 		// This is the same as if you give the sensor to someone in order to use it.
-		client.bindThing(sensor);
+		client.bindThing(item);
+		client.bindThing(bin);
+		client.bindThing(location);
 		
 		try {
 			// We say to the client to start working.
@@ -56,19 +67,19 @@ public class RaspberryPiClient extends ConnectedThingClient {
 			// If the client is connected to Thingworx
 			if(client.isConnected()) {
 				// It makes the sensor to scan
-				client.scan(sensor);
+				client.scan(item);
 				// And it updates its values to Thingworx
-				sensor.processScanRequest();
+				item.processScanRequest();
 			}
 			Thread.sleep(delay);
 		}
 	}
 	/**
 	 * This function makes Raspberry Pi to communicate with Arduino board and obtain all
-	 * values of the sensor.
-	 * @param sensor The sensor
+	 * values of the item.
+	 * @param item The item binded with the Arduino board
 	 */
-	private void scan(SensorThing sensor){
-		sensor.setEmpty(Math.random()>=0.5);
+	private void scan(ItemThing item){
+		item.setAmount(new Random().nextInt());
 	}
 }
