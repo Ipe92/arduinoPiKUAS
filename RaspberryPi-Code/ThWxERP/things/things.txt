@@ -1,0 +1,9 @@
+Location A/A location/LA
+	Bin A/A bin/BA
+		Item A/An item/IA
+		Item B/An item/IB
+	Bin B/A bin/BB
+		Item C/An item/IC
+Location B/A location/LB
+	Bin C/A bin/BC
+		Item D/An item/ID

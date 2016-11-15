@@ -89,7 +89,13 @@ public class LocationThing extends VirtualThing implements Runnable {
 		this.bins.remove(bin.getName());
 		bin.setLocation(null);
 	}
-	public boolean hasItem(ItemThing item){return this.bins.containsKey(item.getName());}
+	public boolean hasBin(BinThing bin){return this.bins.containsKey(bin.getName());}
+	public boolean hasItem(ItemThing item){
+		for (BinThing bin:this.bins.values()){
+			if (bin.hasItem(item)) return true;
+		}
+		return false;
+	}
 	
 	/**
 	 * This function is used in a loop with a delay.

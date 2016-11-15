@@ -5,19 +5,13 @@ import java.util.HashMap;
 import com.thingworx.communications.client.ConnectedThingClient;
 import com.thingworx.communications.client.things.VirtualThing;
 import com.thingworx.metadata.FieldDefinition;
-import com.thingworx.metadata.annotations.ThingworxEventDefinition;
-import com.thingworx.metadata.annotations.ThingworxEventDefinitions;
 import com.thingworx.metadata.annotations.ThingworxPropertyDefinition;
 import com.thingworx.metadata.annotations.ThingworxPropertyDefinitions;
 import com.thingworx.metadata.annotations.ThingworxServiceDefinition;
 import com.thingworx.metadata.annotations.ThingworxServiceResult;
 import com.thingworx.metadata.collections.FieldDefinitionCollection;
 import com.thingworx.types.BaseTypes;
-import com.thingworx.types.InfoTable;
-import com.thingworx.types.collections.ValueCollection;
 import com.thingworx.types.constants.CommonPropertyNames;
-import com.thingworx.types.primitives.IntegerPrimitive;
-import com.thingworx.types.primitives.StringPrimitive;
 
 @SuppressWarnings("serial")
 
