@@ -1,0 +1,19 @@
+C:\Users\navuser3\documents\visual studio 2013\Projects\NAV_gateway\NAV_gateway\obj\Debug\NAV_gateway.csprojResolveAssemblyReference.cache
+C:\Users\1301558\Downloads\NAV_gateway-20161209T112933Z\NAV_gateway\NAV_gateway\bin\Debug\NAV_gateway.exe.config
+C:\Users\1301558\Downloads\NAV_gateway-20161209T112933Z\NAV_gateway\NAV_gateway\obj\Debug\NAV_gateway.csprojResolveAssemblyReference.cache
+C:\Users\1301558\Downloads\NAV_gateway-20161209T112933Z\NAV_gateway\NAV_gateway\bin\Debug\NAV_gateway.exe
+C:\Users\1301558\Downloads\NAV_gateway-20161209T112933Z\NAV_gateway\NAV_gateway\bin\Debug\NAV_gateway.pdb
+C:\Users\1301558\Downloads\NAV_gateway-20161209T112933Z\NAV_gateway\NAV_gateway\obj\Debug\NAV_gateway.exe
+C:\Users\1301558\Downloads\NAV_gateway-20161209T112933Z\NAV_gateway\NAV_gateway\obj\Debug\NAV_gateway.pdb
+F:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\bin\Debug\NAV_gateway.exe.config
+F:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\obj\Debug\NAV_gateway.exe
+F:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\obj\Debug\NAV_gateway.pdb
+F:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\bin\Debug\NAV_gateway.exe
+F:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\bin\Debug\NAV_gateway.pdb
+F:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\obj\Debug\NAV_gateway.csprojResolveAssemblyReference.cache
+E:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\bin\Debug\NAV_gateway.exe
+E:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\bin\Debug\NAV_gateway.pdb
+E:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\bin\Debug\NAV_gateway.exe.config
+E:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\obj\Debug\NAV_gateway.exe
+E:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\obj\Debug\NAV_gateway.pdb
+E:\Koulutyöt\ERP\NAV_gateway\NAV_gateway\obj\Debug\NAV_gateway.csprojResolveAssemblyReference.cache
